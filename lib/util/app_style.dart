@@ -1,48 +1,48 @@
 import 'app_export.dart';
 
 class AppStyle {
-  static TextStyle txtRobotoRegular(BuildContext context) {
+  static TextStyle txtInterRegular(BuildContext context) {
     return TextStyle(
       color: ColorConstant.colorText,
       fontSize: getFontSize(
         context,
-        18,
+        14,
       ),
-      fontFamily: 'Roboto',
+      fontFamily: 'Inter',
       fontWeight: FontWeight.w400,
     );
   }
 
-  static TextStyle txtRobotoMedium(BuildContext context) {
+  static TextStyle txtInterMedium(BuildContext context) {
     return TextStyle(
       color: ColorConstant.colorText,
       fontSize: getFontSize(
         context,
-        18,
+        16,
       ),
-      fontFamily: 'Roboto',
+      fontFamily: 'Inter',
       fontWeight: FontWeight.w500,
     );
   }
-  static TextStyle txtRotoSemiBold(BuildContext context) {
+  static TextStyle txtInterSemiBold(BuildContext context) {
     return TextStyle(
       color: ColorConstant.colorText,
       fontSize: getFontSize(
         context,
         18,
       ),
-      fontFamily: 'Roboto',
+      fontFamily: 'Inter',
       fontWeight: FontWeight.w600,
     );
   }
-  static TextStyle txtRobotoBold(BuildContext context) {
+  static TextStyle txtInterBold(BuildContext context) {
     return TextStyle(
       color: ColorConstant.colorText,
       fontSize: getFontSize(
         context,
         18,
       ),
-      fontFamily: 'Roboto',
+      fontFamily: 'Inter',
       fontWeight: FontWeight.w700,
     );
   }

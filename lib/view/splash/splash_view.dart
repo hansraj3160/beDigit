@@ -1,5 +1,3 @@
-
-
 import '../../util/app_export.dart';
 
 class SplashView extends GetView<SplashController> {
@@ -22,46 +20,88 @@ class SplashView extends GetView<SplashController> {
         backgroundColor: Colors.transparent,
         body: Container(
           decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage(AssetsConstant.splashBg))
-          ),
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: FadeTransition(
-              opacity: controller.animationController,
-              child: Stack(
-                children: [
-                  Image.asset(
-                          AssetsConstant.splashBgCurve,
-                          height: getVerticalSize(context, 130),
-                        ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          AssetsConstant.logo,
-                          height: getVerticalSize(context, 130),
-                        ),
-                        // SizedBox(height: getVerticalSize(context, 5)),
-                        // Text(
-                        //   TextValue.takeControlOfYourWater,
-                        //   style: AppStyle.textgothamRegular(context),
-                        // ),
-                      ],
-                    ),
-                  ),
-                  Align(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(AssetsConstant.splashBg))),
+          child: FadeTransition(
+            opacity: controller.animationController,
+            child: Stack(
+              children: [
+                Align(
                     alignment: Alignment.bottomCenter,
                     child: Image.asset(
-                      AssetsConstant.splashBottom
-                    )
-                   )
-                ],
-              ),
+                      AssetsConstant.splashBgAbstract,
+                      height: 435,
+                      fit: BoxFit.fitHeight,
+                    )),
+                Image.asset(
+                  AssetsConstant.splashBgCurve,
+                  scale: 2.1,
+                ),
+                Positioned(
+                  top: -10,
+                  left: 0,
+                  right: 0,
+                  child: Image.asset(
+                    AssetsConstant.splashPeop,
+                    fit: BoxFit.fitWidth,
+                    // height: 410,
+                    width: Get.width,
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Image.asset(
+                        AssetsConstant.logo,
+                        scale: 2.7,
+                      ),
+                      // SizedBox(height: getVerticalSize(context, 5)),
+                      // Text(
+                      //   TextValue.takeControlOfYourWater,
+                      //   style: AppStyle.textgothamRegular(context),
+                      // ),
+                      SizedBox(
+                        height: 100,
+                      )
+                    ],
+                  ),
+                ),
+                Positioned(
+                  top: 500,
+                  left: 0,
+                  child: Opacity(
+                    opacity: 0.6,
+                    child: Image.asset(
+                      AssetsConstant.splashPlus1,
+
+                      scale: 2,
+                      // height: 410,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: 580,
+                  right: 0,
+                  child: Opacity(
+                    opacity: 0.6,
+                    child: Image.asset(
+                      AssetsConstant.splashPlus2,
+
+                      scale: 2,
+                      // height: 410,
+                    ),
+                  ),
+                ),
+                Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Image.asset(
+                      AssetsConstant.splashBottom,
+                      height: 12,
+                    ))
+              ],
             ),
           ),
         ),

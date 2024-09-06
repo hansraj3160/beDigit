@@ -40,7 +40,7 @@ class SplashController extends GetxController
     );
     animationController.forward().whenCompleteOrCancel(() {
       if (!box.hasData(constEmail) || token.isEmpty) {
-        // Get.offAllNamed(AppRoute.login);
+         Get.offAllNamed(AppRoute.login);
       } else {
         // Get.offAllNamed(AppRoute.homeScreen);
       }

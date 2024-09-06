@@ -1,5 +1,6 @@
 
 
+import 'package:lnh_doctor/util/app_style.dart';
 import 'package:lnh_doctor/view/login/login_controller.dart';
 
 import '../../util/app_export.dart';
@@ -31,7 +32,7 @@ class LoginView extends GetView<LoginController> {
               child: Stack(
                 children: [
                   Align(
-                    alignment: Alignment.center,
+                    alignment: Alignment.topCenter,
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -48,20 +49,20 @@ class LoginView extends GetView<LoginController> {
                       ],
                     ),
                   ),
-                  // Align(
-                  //   alignment: Alignment.bottomCenter,
-                  //   child: Padding(
-                  //     padding: UIhelper.paddingHelper(context,
-                  //         top: 0, bottom: 20, right: 0, left: 0),
-                  //     child: Obx(() {
-                  //       return Text(
-                  //         "${TextValue.version} ${controller.version}+${controller.buildNumber}",
-                  //         style: AppStyle.txtPoppinsRegular14(context)
-                  //             .copyWith(color: ColorConstant.black900),
-                  //       );
-                  //     }),
-                  //   ),
-                  // )
+                  Align(
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: UIhelper.paddingHelper(context,
+                          top: 0, bottom: 20, right: 0, left: 0),
+                      child: Obx(() {
+                        return Text(
+                          "Don't have an account?",
+                          style: AppStyle.txtInterSemiBold(context)
+                              .copyWith(color: ColorConstant.bgColor),
+                        );
+                      }),
+                    ),
+                  )
                 ],
               ),
             ),

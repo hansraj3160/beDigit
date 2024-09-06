@@ -1,0 +1,1 @@
+Flutter 3.19.3 • channel stable • https://github.com/flutter/flutter.git

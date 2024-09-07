@@ -1,12 +1,5 @@
-import 'package:lnh_doctor/util/flavor.dart';
 
 import 'util/app_export.dart';
-
-void main() {
-  const String flavor = String.fromEnvironment('FLAVOR');
-  FlavorConfig.initialize(flavor);
-  runApp(const MyApp());
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

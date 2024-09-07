@@ -1,4 +1,4 @@
-import 'package:lnh_doctor/util/constant.dart';
+import 'package:nexime/util/constant.dart';
 
 import '../../util/app_export.dart';
 
@@ -10,49 +10,27 @@ class LoginBinding implements Bindings {
 }
 
 class LoginController extends GetxController
-    with GetSingleTickerProviderStateMixin {
+    {
   // static values
   static String token = "";
-  var logger = Logger();
+  late TextEditingController emailController;
+  late TextEditingController passwordController;
+  final formKey = GlobalKey<FormState>();
+ List<FocusNode> focusNodes = [
+    FocusNode(),
+    FocusNode(),
+  ];
 
-  late AnimationController animationController;
-  late Animation<Offset> animation;
-  int duration = 3;
-
-  final box = GetStorage();
-
+  var obscurePassword = true.obs;
+  var isLoading = false.obs;
   @override
   void onInit() {
     super.onInit();
+       emailController = TextEditingController();
+    passwordController = TextEditingController();
 
-    splashAnimation();
-    appInfo();
   }
 
-  void splashAnimation() {
-    if (box.hasData(constEmail)) {
-      token = box.read(constEmail);
-    }
 
-    animationController = AnimationController(
-      duration: Duration(seconds: duration),
-      vsync: this,
-    );
-    animationController.forward().whenCompleteOrCancel(() {
-      if (!box.hasData(constEmail) || token.isEmpty) {
-        // Get.offAllNamed(AppRoute.login);
-      } else {
-        // Get.offAllNamed(AppRoute.homeScreen);
-      }
-    });
-  }
 
-  var version = "".obs;
-  var buildNumber = "".obs;
-  void appInfo() {
-    PackageInfo.fromPlatform().then((PackageInfo packageInfo) {
-      version.value = packageInfo.version;
-      buildNumber.value = packageInfo.buildNumber;
-    });
-  }
 }

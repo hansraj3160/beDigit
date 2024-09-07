@@ -1,4 +1,4 @@
-import 'package:lnh_doctor/util/constant.dart';
+import 'package:nexime/util/constant.dart';
 
 import '../../util/app_export.dart';
 

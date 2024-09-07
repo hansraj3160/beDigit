@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Flutter (dev flavor)",
+        "request": "launch",
+        "type": "dart",
+        "program": "lib/main_dev.dart",
+        "args": ["--flavor", "dev"]
+      },
+      {
+        "name": "Flutter (qa flavor)",
+        "request": "launch",
+        "type": "dart",
+        "program": "lib/main_qa.dart",
+        "args": ["--flavor", "qa"]
+      },
+      {
+        "name": "Flutter (uat flavor)",
+        "request": "launch",
+        "type": "dart",
+        "program": "lib/main_uat.dart",
+        "args": ["--flavor", "uat"]
+      }
+    ]
+  }
+  

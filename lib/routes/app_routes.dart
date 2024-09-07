@@ -1,8 +1,8 @@
-import 'package:lnh_doctor/view/dashboard/dashboard_view.dart';
-import 'package:lnh_doctor/view/login/login_controller.dart';
-import 'package:lnh_doctor/view/login/login_view.dart';
+import 'package:nexime/view/dashboard/dashboard_view.dart';
+import 'package:nexime/view/login/login_controller.dart';
+import 'package:nexime/view/login/login_view.dart';
 
-import 'package:lnh_doctor/view/splash/splash_view.dart';
+import 'package:nexime/view/splash/splash_view.dart';
 
 import '../util/app_export.dart';
 

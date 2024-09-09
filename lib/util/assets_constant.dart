@@ -13,4 +13,27 @@ class AssetsConstant {
   static String icEmail = "assets/icon/ic_email.png";
   static String icLock = "assets/icon/ic_lock.png";
   static String icLine = "assets/icon/line.png";
+  static String icGoogle = "assets/icon/ic_google.png";
+  static String icFacebook = "assets/icon/ic_facebook.png";
+  static String icLocatioPin= "assets/icon/ic_location.png";
+  static String icNotiy = "assets/icon/ic_notification.png";
+    static String icCard = "assets/icon/ic_card.png";  
+    static String imgDoc1 = "assets/icon/ic_pic1.png";
+    static String imgDoc2 = "assets/icon/ic_pic2.png";
+        static String imgDoc3 = "assets/icon/ic_pic3.png";
+    static String imgDoc4 = "assets/icon/ic_pic4.png";
+    static String icNurse = "assets/icon/ic_nurse.png";
+   static String icSearch = "assets/icon/icSearch.png";
+    static String icCardiogram = "assets/icon/ic_cardiogram.png";
+    static String icHealthCare = "assets/icon/ic_healthcare.png";
+       static String icSocialCare = "assets/icon/ic_socialCare.png";
+    static String icHospice = "assets/icon/ic_hospice.png";
+    static String icTelemetry = "assets/icon/ic_telemetry.png";
+    static String icMenu = "assets/icon/icMenu.png";
+    static String icHome = "assets/icon/ic_home.png";
+    static String icInvoice = "assets/icon/ic_invoice.png";
+    static String icBooking = "assets/icon/ic_booking.png";
+    static String icUser = "assets/icon/ic_user.png";
+    static String ratingStar="assets/icon/rating_star.png";
+
 }

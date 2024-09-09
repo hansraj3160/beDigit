@@ -1,5 +1,8 @@
-import 'package:nexime/util/constant.dart';
 
+import 'package:nexime/api/api_services.dart';
+import 'package:nexime/model/user_model.dart';
+import 'package:nexime/util/constant.dart';
+ 
 import '../../util/app_export.dart';
 
 class LoginBinding implements Bindings {
@@ -12,6 +15,7 @@ class LoginBinding implements Bindings {
 class LoginController extends GetxController
     {
   // static values
+    // var splashController = Get.find<SplashController>();
   static String token = "";
   late TextEditingController emailController;
   late TextEditingController passwordController;
@@ -23,6 +27,8 @@ class LoginController extends GetxController
 
   var obscurePassword = true.obs;
   var isLoading = false.obs;
+  
+  final box = GetStorage();
   @override
   void onInit() {
     super.onInit();
@@ -32,5 +38,45 @@ class LoginController extends GetxController
   }
 
 
+  void loginService() {
+    isLoading.value = true;
 
+    var parameters = {
+      constEmail: emailController.text,
+      constPassword: passwordController.text,
+    
+    };
+    ApiHelper()
+        .post(url: ApiHelper.logIn, body: parameters,)
+        .then((onValue) async {
+      var response = AuthResponse.fromJson(onValue);
+
+      if (response.statusCode == "OK") {
+
+        ApiHelper().sendNotification(token,);
+       parseToken(response.data.accessToken );
+       
+        Get.offAllNamed(AppRoute.dashboard);
+        
+      } else if (response.statusCode == "BadRequest") {
+      Get.snackbar("Alert",'${response.userMessage}');
+        
+      }
+    }, onError: (error) {
+    Get.snackbar("Error",'$error');
+    }).whenComplete(() {
+      isLoading.value = false;
+    });
+  }
+
+   parseToken(String accessToken) {
+    ApiHelper.token = accessToken;
+    debugPrint(ApiHelper.token);
+   
+  
+ 
+    box.write(constStorageTokenKey, ApiHelper.token);
+
+ 
+  }
 }

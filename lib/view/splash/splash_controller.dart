@@ -1,3 +1,4 @@
+import 'package:nexime/api/api_services.dart';
 import 'package:nexime/util/constant.dart';
 
 import '../../util/app_export.dart';
@@ -30,19 +31,17 @@ class SplashController extends GetxController
   }
 
   void splashAnimation() {
-    if (box.hasData(constEmail)) {
-      token = box.read(constEmail);
-    }
+    
 
     animationController = AnimationController(
       duration: Duration(seconds: duration),
       vsync: this,
     );
     animationController.forward().whenCompleteOrCancel(() {
-      if (!box.hasData(constEmail) || token.isEmpty) {
+      if (!box.hasData(constStorageTokenKey)) {
          Get.offAllNamed(AppRoute.login);
       } else {
-        // Get.offAllNamed(AppRoute.homeScreen);
+        Get.offAllNamed(AppRoute.dashboard);
       }
     });
   }
@@ -55,4 +54,6 @@ class SplashController extends GetxController
       buildNumber.value = packageInfo.buildNumber;
     });
   }
+
+
 }

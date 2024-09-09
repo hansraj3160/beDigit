@@ -1,56 +1,79 @@
-class UserModelAPIResponse {
-  Response? response;
-  UserModelAPIResponse? result;
+class AuthResponse {
+  Data data;
+  String generatedAt;
+  String statusCode;
+  String? userMessage;
+  String? systemMessage;
+  String? systemErrorMessage;
+  String? systemErrorType;
+  String? systemErrorStack;
+  dynamic validationProblemDetails;
 
-  UserModelAPIResponse({this.response, this.result});
+  AuthResponse({
+    required this.data,
+    required this.generatedAt,
+    required this.statusCode,
+    this.userMessage,
+    this.systemMessage,
+    this.systemErrorMessage,
+    this.systemErrorType,
+    this.systemErrorStack,
+    this.validationProblemDetails,
+  });
 
-  factory UserModelAPIResponse.fromJson(Map<String, dynamic> json) =>
-      UserModelAPIResponse(
-          response: json['response'] != null
-              ? Response.fromJson(json['response'])
-              : null,
-          result: json['result'] != null
-              ? UserModelAPIResponse.fromJson(json['result'])
-              : null);
+  factory AuthResponse.fromJson(Map<String, dynamic> json) {
+    return AuthResponse(
+      data: Data.fromJson(json['data']),
+      generatedAt: json['generatedAt'],
+      statusCode: json['statusCode'],
+      userMessage: json['userMessage'],
+      systemMessage: json['systemMessage'],
+      systemErrorMessage: json['systemErrorMessage'],
+      systemErrorType: json['systemErrorType'],
+      systemErrorStack: json['systemErrorStack'],
+      validationProblemDetails: json['validationProblemDetails'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'data': data.toJson(),
+      'generatedAt': generatedAt,
+      'statusCode': statusCode,
+      'userMessage': userMessage,
+      'systemMessage': systemMessage,
+      'systemErrorMessage': systemErrorMessage,
+      'systemErrorType': systemErrorType,
+      'systemErrorStack': systemErrorStack,
+      'validationProblemDetails': validationProblemDetails,
+    };
+  }
 }
 
-class Response {
-  int? responseId;
-  String? responseDesc;
+class Data {
+  String accessToken;
+  String refreshToken;
+  int expiresIn;
 
-  Response({this.responseId, this.responseDesc});
+  Data({
+    required this.accessToken,
+    required this.refreshToken,
+    required this.expiresIn,
+  });
 
-  factory Response.fromJson(Map<String, dynamic> json) => Response(
-      responseId: json['response_id'], responseDesc: json['response_desc']);
-}
+  factory Data.fromJson(Map<String, dynamic> json) {
+    return Data(
+      accessToken: json['accessToken'],
+      refreshToken: json['refreshToken'],
+      expiresIn: json['expiresIn'],
+    );
+  }
 
-class UserModel {
-  String? primaryNumber;
-  String? fullName;
-  int? employeeId;
-  String? firstName;
-  String? lastName;
-  String? email;
-  int? isLead;
-  int? cityId;
-
-  UserModel(
-      {this.primaryNumber,
-      this.fullName,
-      this.employeeId,
-      this.firstName,
-      this.lastName,
-      this.email,
-      this.isLead,
-      this.cityId});
-
-  factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
-      primaryNumber: json['primary_number'],
-      fullName: json['full_name'],
-      employeeId: json['employee_id'],
-      firstName: json['first_name'],
-      lastName: json['last_name'],
-      email: json['email'],
-      isLead: json['is_lead'],
-      cityId: json['city_id']);
+  Map<String, dynamic> toJson() {
+    return {
+      'accessToken': accessToken,
+      'refreshToken': refreshToken,
+      'expiresIn': expiresIn,
+    };
+  }
 }

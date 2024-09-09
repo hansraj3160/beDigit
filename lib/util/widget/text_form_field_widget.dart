@@ -27,6 +27,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final Widget? prefix;
   final Color? counterTextColor;
   final bool? dropdown;
+  final double radius;
 
   const TextFormFieldWidget({
     Key? key,
@@ -53,13 +54,14 @@ class TextFormFieldWidget extends StatelessWidget {
     this.label2,
     this.prefix,
     this.counterTextColor,
+    this.radius=6,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
    bool isDropdown=dropdown??enabled;
     var outlineInputBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(6),
+      borderRadius: BorderRadius.circular(radius),
       borderSide: BorderSide(color: ColorConstant.border),
     );
     return Padding(

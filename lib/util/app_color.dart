@@ -5,15 +5,19 @@ class ColorConstant {
   static const Color colorSecon = Color(0xff07D07C);
   static const Color bgColor = Color(0XFFFFFFFF);
   static const Color black = Color(0xff000000);
+    
+        static const Color black2C = Color(0xff2E2C2C);
   static const Color errorColor = Color(0xffF41B1B);
   static const Color gray = Color(0xff7a7a7a);
+  static const Color grayA3 = Color(0xffA6A3A3);
+    static const Color grayAD = Color(0xff4E4D4D);
   static const Color border = Color(0XffE3E3E3);
   static const Color blueGray = Color(0xff9ca9ba);
   static const Color blueLight = Color(0xff168BE0);
   static const Color blueLight2 = Color(0xff1658CF);
-  static const Color blueLight3 = Color(0xff0150C6);
+  static const Color blueLight3 = Color(0xff0150C6);  static const Color blueLight4 = Color(0xff18B2F5);
   static const Color hintColor = Color(0xff221F1F);
-  static const Color homeBg = Color(0XFFC1F3F1);
+  static const Color homeBg = Color(0XFFD5FFED);
   static const Color card1 = Color(0XFF7EBBF2);
   static const Color card2 = Color(0XFF6CF1C1);
 

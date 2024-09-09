@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "802666146918",
+    "project_id": "be-digitalise",
+    "storage_bucket": "be-digitalise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802666146918:android:fc0523c6269ed0bb8851a7",
+        "android_client_info": {
+          "package_name": "com.nexime.healthcare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDShFdvVZdExy2LB9lkeOcE6a8Mn8NbPq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802666146918:android:6e476f071786f7838851a7",
+        "android_client_info": {
+          "package_name": "com.nexime.healthcare.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDShFdvVZdExy2LB9lkeOcE6a8Mn8NbPq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802666146918:android:5e37308597923b2a8851a7",
+        "android_client_info": {
+          "package_name": "com.nexime.healthcare.qa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDShFdvVZdExy2LB9lkeOcE6a8Mn8NbPq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802666146918:android:191c189a1d3960d98851a7",
+        "android_client_info": {
+          "package_name": "com.nexime.healthcare.uat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDShFdvVZdExy2LB9lkeOcE6a8Mn8NbPq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

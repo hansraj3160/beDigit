@@ -1,13 +1,4 @@
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:nexime/model/booking_model.dart';
-import 'package:nexime/model/service_model.dart';
-import 'package:nexime/service/push_notification_service.dart';
-import 'package:nexime/util/constant.dart';
-import 'package:nexime/view/dashboard/booking_view.dart';
-import 'package:nexime/view/dashboard/home_view.dart';
-import 'package:nexime/view/dashboard/invoice_view.dart';
-import 'package:nexime/view/dashboard/profile_view.dart';
+
 
 import '../../util/app_export.dart';
 
@@ -195,7 +186,7 @@ notificationService();
         initializationSettings,
         onDidReceiveNotificationResponse:
             (NotificationResponse notificationResponse) {
-         debugPrint("opened via ${notificationResponse}");
+         debugPrint("opened via $notificationResponse");
           switch (notificationResponse.notificationResponseType) {
             case NotificationResponseType.selectedNotification:
               debugPrint(" NotificationResponseType.selectedNotification");

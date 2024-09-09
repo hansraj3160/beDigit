@@ -1,6 +1,5 @@
 import 'package:nexime/view/dashboard/dashboard_view.dart';
 
-import 'package:nexime/view/login/login_controller.dart';
 import 'package:nexime/view/login/login_view.dart';
 
 import 'package:nexime/view/splash/splash_view.dart';

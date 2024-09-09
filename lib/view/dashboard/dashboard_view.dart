@@ -1,6 +1,6 @@
 
 import 'package:nexime/util/app_export.dart';
-import 'package:nexime/util/app_style.dart';
+
 
 class DashboardView extends GetView<DashboardController> {
   const DashboardView({super.key});
@@ -22,7 +22,7 @@ class DashboardView extends GetView<DashboardController> {
          bottomNavigationBar: BottomAppBar( //bottom navigation bar on scaffold
       color:ColorConstant.colorSecon,
       
-      shape: CircularNotchedRectangle(), //shape of notch
+      shape: const CircularNotchedRectangle(), //shape of notch
       notchMargin: 5, //notche margin between floating button and bottom appbar
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 10),
@@ -50,7 +50,7 @@ class DashboardView extends GetView<DashboardController> {
                           color: controller.selectedIndex.value==index?ColorConstant.bgColor: ColorConstant.colorPrimary,
                         ),
                         child: Image.asset(item['icon'], scale: 2,color:controller.selectedIndex.value==index?ColorConstant.colorPrimary: ColorConstant.bgColor,)),
-                      SizedBox(height: 3),
+                      const SizedBox(height: 3),
                       Text(
                         item['title'],
                   
@@ -69,13 +69,13 @@ class DashboardView extends GetView<DashboardController> {
         ),
       body: PageView(
           controller: controller.pageController,
-          children: controller.screens(),
           onPageChanged: (index) {
           
               controller.selectedIndex.value = index;
            
           },
-          physics: NeverScrollableScrollPhysics(), // Disable swipe navigation if needed
+          physics: const NeverScrollableScrollPhysics(),
+          children: controller.screens(), // Disable swipe navigation if needed
         ),
       
         ),

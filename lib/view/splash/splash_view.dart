@@ -63,7 +63,7 @@ class SplashView extends GetView<SplashController> {
                       //   TextValue.takeControlOfYourWater,
                       //   style: AppStyle.textgothamRegular(context),
                       // ),
-                      SizedBox(
+                      const SizedBox(
                         height: 100,
                       )
                     ],

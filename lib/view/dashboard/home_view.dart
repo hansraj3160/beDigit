@@ -1,7 +1,4 @@
-import 'package:nexime/util/app_style.dart';
-import 'package:nexime/util/string_constant.dart';
 import 'package:nexime/util/widget/booking_card.dart';
-import 'package:nexime/util/widget/text_form_field_widget.dart';
 
 import '../../util/app_export.dart';
 
@@ -245,14 +242,14 @@ crossAxisAlignment: CrossAxisAlignment.start,
     SizedBox(
       
       height: 58,
-      child: Image.asset(controller.featuredCandidates[index].imgPath,scale: 2.3,fit: BoxFit.fill,)),  SizedBox(height: 3,),Text(
+      child: Image.asset(controller.featuredCandidates[index].imgPath,scale: 2.3,fit: BoxFit.fill,)),  const SizedBox(height: 3,),Text(
                             controller.featuredCandidates[index].title  ,
                               style: AppStyle.txtInterMedium(context)
                                   .copyWith( fontSize: 12,
                                       color: ColorConstant.black2C,
                                     ),
                             ), 
-                            SizedBox(height: 2,),
+                            const SizedBox(height: 2,),
                             Text(
                               textAlign: TextAlign.center,
                              controller.featuredCandidates[index].specialist,maxLines: 2,

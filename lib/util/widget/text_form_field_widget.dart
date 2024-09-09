@@ -1,7 +1,5 @@
 
 import 'package:nexime/util/app_export.dart';
-import 'package:nexime/util/app_style.dart';
-import 'package:nexime/util/widget/validation_helper.dart';
 
 class TextFormFieldWidget extends StatelessWidget {
   final String? label;
@@ -62,7 +60,7 @@ class TextFormFieldWidget extends StatelessWidget {
    bool isDropdown=dropdown??enabled;
     var outlineInputBorder = OutlineInputBorder(
       borderRadius: BorderRadius.circular(radius),
-      borderSide: BorderSide(color: ColorConstant.border),
+      borderSide: const BorderSide(color: ColorConstant.border),
     );
     return Padding(
       padding: UIhelper.paddingHelper(context,

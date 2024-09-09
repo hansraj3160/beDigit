@@ -1,6 +1,4 @@
-import 'package:nexime/model/booking_model.dart';
 import 'package:nexime/util/app_export.dart';
-import 'package:nexime/util/app_style.dart';
 
 // ignore: must_be_immutable
 class BookingCard extends StatelessWidget {
@@ -53,7 +51,7 @@ class BookingCard extends StatelessWidget {
                                   .copyWith(fontSize: 6,
                                       color: ColorConstant.grayAD,
                                     ),
-                                                          ),SizedBox(width: 20,),
+                                                          ),const SizedBox(width: 20,),
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 9,vertical: 2),
                               decoration:   BoxDecoration(

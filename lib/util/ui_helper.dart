@@ -1,3 +1,4 @@
+
 import 'app_export.dart';
 
 class UIhelper {
@@ -26,5 +27,10 @@ class UIhelper {
         getSize(context, rounded ?? 5),
       ),
     );
+  }
+  static logoutUser() {
+    final box = GetStorage();    
+     box.remove(constStorageTokenKey);
+      Get.offAllNamed(AppRoute.login);
   }
 }

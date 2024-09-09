@@ -1,6 +1,5 @@
 
 
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:nexime/util/app_export.dart';
 
 class PushNotificationService {

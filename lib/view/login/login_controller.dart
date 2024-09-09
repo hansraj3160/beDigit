@@ -1,8 +1,8 @@
 
-import 'package:nexime/api/api_services.dart';
-import 'package:nexime/model/user_model.dart';
-import 'package:nexime/util/constant.dart';
+
  
+import 'package:nexime/model/user_model.dart';
+
 import '../../util/app_export.dart';
 
 class LoginBinding implements Bindings {

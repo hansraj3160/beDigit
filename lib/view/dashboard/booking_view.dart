@@ -1,6 +1,5 @@
 
 import 'package:nexime/util/app_export.dart';
-import 'package:nexime/util/app_style.dart';
 
 class BookingView extends GetView<DashboardController> {
   const BookingView({super.key});
